@@ -33,3 +33,13 @@ usethis::create_github_token()
 gitcreds::gitcreds_set()
 usethis::use_git()
 usethis::use_github()
+
+# first commit:
+# Stage all modified and untracked files
+gert::git_add(gert::git_status()$file)
+
+# Commit with a descriptive message
+gert::git_commit("Add initial analysis script and project files")
+
+# Push to your GitHub repository
+gert::git_push()
