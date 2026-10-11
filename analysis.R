@@ -43,3 +43,6 @@ gert::git_commit("Add initial analysis script and project files")
 
 # Push to your GitHub repository
 gert::git_push()
+
+gert::git_commit_all("Replace absolute paths with relative paths")
+gert::git_push()
