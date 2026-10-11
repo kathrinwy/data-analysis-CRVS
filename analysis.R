@@ -26,8 +26,6 @@ pak::pak(c("usethis", "gitcreds", "renv", "tidyverse", "broom", "gtsummary"))
 # broom: we know
 # gtsummary: better tables
 
-file.path(Sys.getenv("USERPROFILE"), "Documents/Kathrin/07-PhD/14- Second Paper/Code")
-
 # connect to github
 usethis::create_github_token()
 gitcreds::gitcreds_set()
@@ -44,5 +42,6 @@ gert::git_commit("Add initial analysis script and project files")
 # Push to your GitHub repository
 gert::git_push()
 
+# Clean up aboslute paths
 gert::git_commit_all("Replace absolute paths with relative paths")
 gert::git_push()
