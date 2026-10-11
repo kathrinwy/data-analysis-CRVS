@@ -15,6 +15,7 @@ if(length(to_install) > 0) {
 # Set up package manager
 if (!requireNamespace("pak", quietly = TRUE)) install.packages("pak") # download pak if missing
 install.packages("usethis")
+install.packages("gert") # github commits etc. from code
 
 pak::pak(c("usethis", "gitcreds", "renv", "tidyverse", "broom", "gtsummary"))
 # new suite of packages necessary for proper workfow
@@ -26,3 +27,9 @@ pak::pak(c("usethis", "gitcreds", "renv", "tidyverse", "broom", "gtsummary"))
 # gtsummary: better tables
 
 file.path(Sys.getenv("USERPROFILE"), "Documents/Kathrin/07-PhD/14- Second Paper/Code")
+
+# connect to github
+usethis::create_github_token()
+gitcreds::gitcreds_set()
+usethis::use_git()
+usethis::use_github()
