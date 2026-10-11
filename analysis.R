@@ -45,4 +45,4 @@ gert::git_push()
 # Clean up aboslute paths
 gert::git_commit_all("Replace absolute paths with relative paths")
 gert::git_push()
-d
+
